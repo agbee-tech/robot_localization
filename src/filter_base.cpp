@@ -99,7 +99,7 @@ void FilterBase::reset()
   covariance_epsilon_ *= 0.001;
 
   // Assume 30Hz from sensor data (configurable)
-  sensor_timeout_ = rclcpp::Duration::from_seconds(0.033333333);
+  sensor_timeout_ = rclcpp::Duration(0.033333333);
 
   // Initialize our last update and measurement times
   last_measurement_time_ = rclcpp::Time(0, 0, RCL_ROS_TIME);
